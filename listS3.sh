@@ -13,7 +13,7 @@ do
       #echo "./subS3.sh ${line}S3list.txt"
       ./subS3.sh ${line}S3list.txt > ${line}_subS3.output 2>&1
     else
-      echo "${line}S3list.txt has no S3 buckets"
+      echo "This is the loop for ${line}S3list.txt file but has no S3 buckets"
    fi
 cat ${line}_subS3.output | grep -B2 "TagSet does not exist"
 done < "$LIST"
