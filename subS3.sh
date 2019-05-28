@@ -7,5 +7,6 @@ while IFS= read -r line
 
   do
    echo ${line:20}
-   aws s3api get-bucket-tagging --bucket ${line:20} 
+   aws s3api get-bucket-tagging --bucket ${line:20}
 done < "$FILES"
+exit 0
